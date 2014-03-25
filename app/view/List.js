@@ -4,43 +4,32 @@ Ext.define('AppfallEN.view.List', {
 	xtype: 'listpage',
 
 	config: {
-		title: 'List',
+		title: 'Abfall ABC',
 		iconCls: 'info',
 		
-		itemTpl: '{last}, {first}',
+		itemTpl: '<b>{first}</b> <br> {text}',
 		grouped: true,
 		indexBar: true,
 		store: Ext.create('Ext.data.Store', {
 			fields: [
 				{name: 'first', type: 'string'},
-				{name: 'last', type: 'string'}
+				{name: 'text', type: 'string'}
 			],
 			grouper: {
 				groupFn: function(record) {
-				return record.get('last').substr(0, 1);},
-				sortProperty: 'last'
+				return record.get('first').substr(0, 1);},
+				sortProperty: 'first'
 			},
 			data: [
-				{first: 'Aaron', last: 'Karp'},
-				{first: 'Baron', last: 'Chandler'},
-				{first: 'Bryan', last: 'Johnson'},
-				{first: 'David', last: 'Evans'},
-				{first: 'John', last: 'Clark'},
-				{first: 'John', last: 'Taylor'},
-				{first: 'Hanna', last: 'Wehmeyer'},
-				{first: 'Aaron', last: 'Karp'},
-				{first: 'Baron', last: 'Chandler'},
-				{first: 'Bryan', last: 'Johnson'},
-				{first: 'David', last: 'Evans'},
-				{first: 'John', last: 'Clark'},
-				{first: 'John', last: 'Taylor'},
-				{first: 'Hanna', last: 'Wehmeyer'},{first: 'Aaron', last: 'Karp'},
-				{first: 'Baron', last: 'Chandler'},
-				{first: 'Bryan', last: 'Johnson'},
-				{first: 'David', last: 'Evans'},
-				{first: 'John', last: 'Clark'},
-				{first: 'John', last: 'Taylor'},
-				{first: 'Hanna', last: 'Wehmeyer'}
+				{first: 'Altöl', text: 'Schadstoffsammlung'},
+				{first: 'Altreifen', text: 'Handel'},
+				{first: 'Batterien', text: 'Schadstoffsammlung, GRS Sammelstellen'},
+				{first: 'Biomüll', text: 'braune Tonne'},
+				{first: 'Grünschnitt', text: 'komposthaufen, braune Tonne'},
+				{first: 'Windeln', text: 'Restmüll'},
+				{first: 'Kühlschrank', text: 'Wertstoffhof, Umladeanlage Witten/Gevelsberg'},
+				{first: 'Elektrogeräte', text: 'Wertstoffhof, Umladeanlage Witten/Gevelsberg'},
+				{first: 'Flaschen', text: 'Glascontainer'},
 			]
 			})
 		
