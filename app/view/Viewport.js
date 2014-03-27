@@ -7,12 +7,7 @@ Ext.define('AppfallEN.view.Viewport', {
 		
 		items: [
 		{
-			xtype: 'titlebar',
-			docked: 'top',
-			title: 'AppfallEN'
-		},
-		{
-			xtype: 'homepanel'
+			xtype: 'homepanel'			
 		},
 		{
 			xtype: 'productspage'

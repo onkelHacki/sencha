@@ -8,6 +8,11 @@ Ext.define('AppfallEN.view.Products', {
 		iconCls: 'star',
 		items: [
 		{
+			xtype: 'titlebar',
+			docked: 'top',
+			title: 'Go Bio!'
+		},
+		{
 			xtype: 'image',
 			src: 'http://www.stromtonne.de/_image/Tausch.jpg'
 		},
